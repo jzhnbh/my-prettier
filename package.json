@@ -1,0 +1,57 @@
+{
+  "name": "my-prettier",
+  "displayName": "我的 Prettier 格式化工具",
+  "description": "一个简化版的 Prettier 代码格式化 VSCode 插件",
+  "version": "0.1.0",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": [
+    "Formatters"
+  ],
+  "activationEvents": [
+    "onLanguage:javascript",
+    "onLanguage:javascriptreact",
+    "onLanguage:typescript",
+    "onLanguage:typescriptreact",
+    "onLanguage:json"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "myPrettier.format",
+        "title": "使用我的 Prettier 格式化代码"
+      },
+      {
+        "command": "myPrettier.formatWithMyImplementation",
+        "title": "使用我的简易版实现格式化代码"
+      }
+    ],
+    "configuration": {
+      "title": "我的 Prettier",
+      "properties": {
+        "myPrettier.useMyImplementation": {
+          "type": "boolean",
+          "default": false,
+          "description": "是否使用自己实现的简易版 Prettier 格式化代码"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "package": "node package-extension.js"
+  },
+  "keywords": [
+    "prettier",
+    "formatter",
+    "vscode-extension"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^3.5.3",
+    "vscode": "^1.1.37"
+  }
+}
