@@ -3,8 +3,14 @@
   "displayName": "我的 Prettier 格式化工具",
   "description": "一个简化版的 Prettier 代码格式化 VSCode 插件",
   "version": "0.1.0",
+  "publisher": "1qec",
+  "icon": "images/icon.png",
   "engines": {
     "vscode": "^1.60.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jzhnbh/my-prettier.git"
   },
   "categories": [
     "Formatters"
@@ -41,7 +47,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "package": "node package-extension.js"
+    "package": "node package-extension.js",
+    "publish": "node publish.js"
   },
   "keywords": [
     "prettier",
